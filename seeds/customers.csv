@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,email,city,created_at
+1,Alice,Martins,alice@email.com,São Paulo,2024-01-10
+2,Bruno,Costa,bruno@email.com,Rio de Janeiro,2024-02-03
+3,Camila,Souza,camila@email.com,Curitiba,2024-02-14
+4,Diego,Lima,diego@email.com,Belo Horizonte,2024-03-22
+5,Eduarda,Ferreira,eduarda@email.com,Porto Alegre,2024-04-05

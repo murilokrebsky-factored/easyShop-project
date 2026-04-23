@@ -1,0 +1,11 @@
+order_id,order_item_id,customer_id,product_id,quantity,unit_price_cents,status,ordered_at
+1001,1,1,1,1,4999,delivered,2024-03-01
+1001,2,1,4,2,3499,delivered,2024-03-01
+1002,3,2,2,1,12999,delivered,2024-03-05
+1003,4,3,3,1,8999,shipped,2024-03-10
+1003,5,3,7,1,2499,shipped,2024-03-10
+1004,6,4,6,1,15999,pending,2024-03-20
+1005,7,5,5,2,5999,delivered,2024-04-01
+1005,8,5,1,1,4999,delivered,2024-04-01
+1006,9,1,2,1,12999,cancelled,2024-04-10
+1006,10,99,1,1,4999,pending,2024-05-01

@@ -1,0 +1,8 @@
+product_id,name,category,price_cents,sku
+1,Wireless Mouse,Electronics,4999,ELEC-001
+2,Mechanical Keyboard,Electronics,12999,ELEC-002
+3,USB-C Hub,Electronics,8999,ELEC-003
+4,Desk Lamp,Home Office,3499,HOME-001
+5,Notebook Stand,Home Office,5999,HOME-002
+6,Webcam HD,Electronics,15999,ELEC-004
+7,Mouse Pad XL,Accessories,2499,ACCS-001
