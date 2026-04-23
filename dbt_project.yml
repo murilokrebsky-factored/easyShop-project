@@ -1,0 +1,22 @@
+name: easy_shop
+
+profile: easy_shop
+
+seed-paths: ["seeds"]
+model-paths: ["models"]
+macro-paths: ["macros"]
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+seeds:
+  # Builds seeds into '<your_schema_name>_raw'
+  easy_shop:
+    +schema: raw
+
+models:
+  easy_shop:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

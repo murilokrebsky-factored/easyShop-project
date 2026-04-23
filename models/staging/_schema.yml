@@ -1,0 +1,59 @@
+models:
+- name: stg_customers
+  description: Customers information
+  columns:
+    - name: customer_id
+      description: Unique identifier of a customer (pk)
+      data_tests:
+        - unique
+        - not_null
+    - name: first_name
+      description: Customer first name
+    - name: last_name
+      description: Customer last name
+    - name: full_name
+      description: Concatenation of first and last name
+    - name: email
+      description: Customer email
+      data_tests:
+        - not_null
+        - assert_valid_email
+    - name: city
+      description: Customer city
+    - name: created_date
+      description: Day of the customer's registration (YYYY-MM-DD)
+- name: stg_orders
+  description: Order-item level information
+  columns:
+    - name: order_id
+      description: Unique identifier of an order
+      data_tests:
+        - not_null
+    - name: order_item_id
+      description: Unique identifier of the pair order-item (pk)
+      data_tests:
+        - unique
+        - not_null
+    - name: customer_id
+      description: Unique identifier of customer (fk)
+      data_tests:
+        - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+    - name: product_id
+      description: Unique identifier of product (fk)
+    - name: quantity
+      description: Order-item pair quantity
+    - name: unit_price_dollars
+      description: The unit price of the product in dollars
+    - name: total_order_item_price_dollars
+      description: The unit price multiplied by quantity
+    - name: status
+      description: status of the order
+      data_tests:
+        - accepted_values:
+            arguments:
+              values: ['shipped', 'delivered', 'pending', 'cancelled']
+    - name: ordered_at
+      description: Order's date (YYYY-MM-DD)
